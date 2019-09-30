@@ -26,7 +26,7 @@
 </script>
 
 <style>
-	h1 { margin: 0 10px 25px 10px; padding: 5px; font-size: 32px; font-family: Arial }
+	h1 { margin: 0 10px 25px 5px; padding: 5px; font-size: 32px; font-family: Arial }
 	input { margin: 0 10px 10px 10px; padding: 5px; font-size: 16px; width: 150px }
     label { margin: 0 10px 10px 10px; font-size: 16px; display: block; font-family: Arial }
 	span { margin: 10px 50px 10px 10px; font-size: 32px; font-family: Arial }
@@ -50,7 +50,7 @@
         required="" 
         min="1" 
         max="59"
-        onkeyup="if(parseInt(this.value)>59){ this.value =59; return false; }"
+        onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
         <br>
     <input id="E" 
@@ -60,11 +60,11 @@
         required="" 
         min="1" 
         max="59"
-        onkeyup="if(parseInt(this.value)>59){ this.value =59; return false; }"
+        onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
         <br>
     <br>
-    <label>APAT Score:</label><br>
+    <label>APAT Score:</label>
     <span id="Score"></span>
     <br>
 
