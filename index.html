@@ -26,7 +26,10 @@
 </script>
 
 <style>
-	input { margin: 0 10px 10px; padding: 5px; font-size: 16px; width: 150px }
+	h1 { margin: 0 10px 25px 10px; padding: 5px; font-size: 32px; font-family: Arial }
+	input { margin: 0 10px 10px 10px; padding: 5px; font-size: 16px; width: 150px }
+    label { margin: 0 10px 10px 10px; font-size: 16px; display: block; font-family: Arial }
+	span { margin: 10px 50px 10px 10px; font-size: 32px; font-family: Arial }
 </style>
 
 </head>
@@ -34,34 +37,35 @@
 
 	<h1>APAT Calculator in the makings</h1>
     
+    <label>Enter your endurance scores:</label>
     <input id="A" type="number" class="form-control formBlock" placeholder="Push Ups" required=""><br>
     <input id="B" type="number" class="form-control formBlock" placeholder="Sit Ups" required=""><br>
     <input id="C" type="number" class="form-control formBlock" placeholder="Pull Ups" required=""><br>
     <br>
-    Run Time
-    <br>
+    <label>Enter your run time:</label>
     <input id="D"
     	type="number" 
         class="form-control formBlock" 
-        placeholder="Run Minutes" 
+        placeholder="Minutes" 
         required="" 
         min="1" 
         max="59"
         onkeyup="if(parseInt(this.value)>59){ this.value =59; return false; }"
-        > minutes
+        >
         <br>
     <input id="E" 
     	type="number" 
     	class="form-control formBlock" 
-    	placeholder="Run Seconds" 
+    	placeholder="Seconds" 
         required="" 
         min="1" 
         max="59"
         onkeyup="if(parseInt(this.value)>59){ this.value =59; return false; }"
-        > seconds
+        >
         <br>
     <br>
-    APAT Score: <span id="Score"></span>
+    <label>APAT Score:</label><br>
+    <span id="Score"></span>
     <br>
 
 <br>
