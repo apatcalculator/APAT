@@ -21,12 +21,32 @@
             //$('#Score').html(((push + sit + chin)/3) + ((min + sec)/2)); 
             
             //Push Up
-            if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
+            if (push >= 70) {document.getElementById("PushUp").innerHTML = "Machine";}
+            if (push <= 69 & push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
             if (push <= 54 & push >= 50) {document.getElementById("PushUp").innerHTML = "Good";}
             if (push <= 49 & push >= 46) {document.getElementById("PushUp").innerHTML = "Fair";}
             if (push <= 45 & push >= 38) {document.getElementById("PushUp").innerHTML = "Poor";}
             if (push <= 37 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
             if (push == null | push == "") {document.getElementById("PushUp").innerHTML = "";}
+            
+            //Sit Up
+            if (sit >= 70) {document.getElementById("SitUp").innerHTML = "Machine";}
+            if (sit <= 69 & sit >= 47) {document.getElementById("SitUp").innerHTML = "Excellent";}
+            if (sit <= 46 & sit >= 42) {document.getElementById("SitUp").innerHTML = "Good";}
+            if (sit <= 41 & sit >= 38) {document.getElementById("SitUp").innerHTML = "Fair";}
+            if (sit <= 37 & sit >= 23) {document.getElementById("SitUp").innerHTML = "Poor";}
+            if (sit <= 22 & sit >= 1) {document.getElementById("SitUp").innerHTML = "Very Poor";}
+            if (sit == null | sit == "") {document.getElementById("SitUp").innerHTML = "";}
+       
+            //Chin Up
+            if (chin >= 70) {document.getElementById("ChinUp").innerHTML = "Machine";}
+            if (chin <= 69 & chin >= 11) {document.getElementById("ChinUp").innerHTML = "Excellent";}
+            if (chin <= 10 & chin >= 9) {document.getElementById("ChinUp").innerHTML = "Good";}
+            if (chin <= 8 & chin >= 7) {document.getElementById("ChinUp").innerHTML = "Fair";}
+            if (chin <= 6 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
+            if (chin <= 4 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
+            if (chin == null | chin == "") {document.getElementById("ChinUp").innerHTML = "";}
+            
         });
         
 	});
@@ -43,7 +63,7 @@
 </head>
 <body>
 
-	<h1>APAT Calculator in the making</h1>
+	<h1>APF Calculator (Males 20-29)</h1>
     
     <label>Enter your endurance scores:</label>
     <input id="A" 
@@ -54,8 +74,7 @@
         min="1" 
         max="300"
         onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }">
-    <stat id="PushUp"></stat>
-    <br>
+    <stat id="PushUp"></stat><br>
     <input id="B" 
     	type="number" 
         class="form-control formBlock" 
@@ -63,7 +82,8 @@
         required=""
         min="1" 
         max="300"
-        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }"><br>
+        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }">
+    <stat id="SitUp"></stat><br>
     <input id="C" 
     	type="number" 
         class="form-control formBlock" 
@@ -72,7 +92,8 @@
         min="1" 
         max="100"
         onkeyup="if(parseInt(this.value) > 100){ this.value = 100; return false; }"
-        ><br>
+        >
+    <stat id="ChinUp"></stat><br>
     <br>
     <label>Enter your run time:</label>
     <input id="D"
