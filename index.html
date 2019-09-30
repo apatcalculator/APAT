@@ -1,7 +1,7 @@
 <html>
 <head>
 
-  <title>APAT Calculator</title>
+  <title>APF Calculator</title>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
@@ -12,16 +12,20 @@
     $(window).load(function(){
       
         $('input').keyup(function(){
-            var Push  = Number($('#A').val()); 
-            var Sit = Number($('#B').val()); 
-            var Pull  = Number($('#C').val());
-            var Min = Number($('#D').val());
-            var Sec = Number($('#E').val());
+            var push  = Number($('#A').val()); 
+            var sit = Number($('#B').val()); 
+            var chin  = Number($('#C').val());
+            var min = Number($('#D').val());
+            var sec = Number($('#E').val());
 
-        $('#Score').html(((Push + Sit + Pull)/3) + ((Min + Sec)/2)
+            //$('#Score').html(((push + sit + chin)/3) + ((min + sec)/2)); 
             
-            ); 
-
+            //Push Up
+            if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
+            if (push <= 54) {document.getElementById("PushUp").innerHTML = "Good";}
+            if (push <= 49) {document.getElementById("PushUp").innerHTML = "Fair";}
+            if (push <= 45) {document.getElementById("PushUp").innerHTML = "Poor";}
+            if (push <= 37) {document.getElementById("PushUp").innerHTML = "Very Poor";}
         });
         
 	});
@@ -32,6 +36,7 @@
 	input { margin: 0 10px 10px 10px; padding: 5px; font-size: 24px; width: 200px }
     label { margin: 0 10px 10px 10px; font-size: 20px; display: block; font-family: Arial }
 	span { margin: 0 0px 0px 10px; font-size: 44px; font-family: Arial }
+	stat { margin: 0 0px 0px 10px; font-size: 24px; font-family: Arial }
 </style>
 
 </head>
@@ -43,15 +48,17 @@
     <input id="A" 
     	type="number" 
         class="form-control formBlock" 
-        placeholder="Push Ups" 
+        placeholder="Push-Ups" 
         required=""
         min="1" 
         max="300"
-        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }"><br>
+        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }">
+    <stat id="PushUp"></stat>
+    <br>
     <input id="B" 
     	type="number" 
         class="form-control formBlock" 
-        placeholder="Sit Ups" 
+        placeholder="Sit-Ups" 
         required=""
         min="1" 
         max="300"
@@ -59,7 +66,7 @@
     <input id="C" 
     	type="number" 
         class="form-control formBlock" 
-        placeholder="Pull Ups" 
+        placeholder="Chin-Ups" 
         required=""
         min="1" 
         max="100"
@@ -88,7 +95,7 @@
         >
         <br>
     <br>
-    <label>APAT Score:</label>
+    <!-- <label>APAT Score:</label> -->
     <span id="Score"></span>
     <br>
 
