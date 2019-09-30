@@ -45,6 +45,9 @@
         class="form-control formBlock" 
         placeholder="Run Minutes" 
         required="" 
+        min="1" 
+        max="59"
+        onkeyup="if(parseInt(this.value)>59){ this.value =59; return false; }"
         > minutes
         <br>
     <input id="E" 
