@@ -1,7 +1,7 @@
 <html>
 <head>
 
-  <title> APAT Calculator</title>
+  <title>APAT Calculator</title>
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
@@ -22,10 +22,11 @@
             
             //Push Up
             if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
-            if (push <= 54) {document.getElementById("PushUp").innerHTML = "Good";}
-            if (push <= 49) {document.getElementById("PushUp").innerHTML = "Fair";}
-            if (push <= 45) {document.getElementById("PushUp").innerHTML = "Poor";}
-            if (push <= 37) {document.getElementById("PushUp").innerHTML = "Very Poor";}
+            if (push <= 54 & push >= 50) {document.getElementById("PushUp").innerHTML = "Good";}
+            if (push <= 49 & push >= 46) {document.getElementById("PushUp").innerHTML = "Fair";}
+            if (push <= 45 & push >= 38) {document.getElementById("PushUp").innerHTML = "Poor";}
+            if (push <= 37 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
+            if (push == null | push == "") {document.getElementById("PushUp").innerHTML = "";}
         });
         
 	});
@@ -42,7 +43,7 @@
 </head>
 <body>
 
-	<h1>APF Calculator in the making</h1>
+	<h1>APAT Calculator in the making</h1>
     
     <label>Enter your endurance scores:</label>
     <input id="A" 
