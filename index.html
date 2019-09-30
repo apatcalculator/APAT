@@ -40,9 +40,31 @@
 	<h1>APAT Calculator in the makings</h1>
     
     <label>Enter your endurance scores:</label>
-    <input id="A" type="number" class="form-control formBlock" placeholder="Push Ups" required=""><br>
-    <input id="B" type="number" class="form-control formBlock" placeholder="Sit Ups" required=""><br>
-    <input id="C" type="number" class="form-control formBlock" placeholder="Pull Ups" required=""><br>
+    <input id="A" 
+    	type="number" 
+        class="form-control formBlock" 
+        placeholder="Push Ups" 
+        required=""
+        min="1" 
+        max="300"
+        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }"><br>
+    <input id="B" 
+    	type="number" 
+        class="form-control formBlock" 
+        placeholder="Sit Ups" 
+        required=""
+        min="1" 
+        max="300"
+        onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }"><br>
+    <input id="C" 
+    	type="number" 
+        class="form-control formBlock" 
+        placeholder="Pull Ups" 
+        required=""
+        min="1" 
+        max="100"
+        onkeyup="if(parseInt(this.value) > 100){ this.value = 100; return false; }"
+        ><br>
     <br>
     <label>Enter your run time:</label>
     <input id="D"
