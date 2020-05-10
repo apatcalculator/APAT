@@ -50,8 +50,8 @@
             if ((min+sec) <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
             if ((min+sec) <= 993 & (min+sec) >= 927) {document.getElementById("RunTime").innerHTML = "Poor";}
             if ((min+sec) >= 994) {document.getElementById("RunTime").innerHTML = "Very Poor";}
-            if (min == null | min == "") {document.getElementById("RunTime").innerHTML = "";}
-            if (sec == "") {document.getElementById("RunTime").innerHTML = "";}
+            if (min == null | min === "") {document.getElementById("RunTime").innerHTML = "";}
+            if (sec == null | sec === "") {document.getElementById("RunTime").innerHTML = "";}
             
         });
         
@@ -153,4 +153,3 @@
 </body>
 
 </html>
-
