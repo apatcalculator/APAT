@@ -15,7 +15,7 @@
             var push  = Number($('#A').val()); 
             var sit = Number($('#B').val()); 
             var chin  = Number($('#C').val());
-            var min = Number($('#D').val());
+            var min = 60 * Number($('#D').val());
             var sec = Number($('#E').val());
 
             //$('#Score').html(((push + sit + chin)/3) + ((min + sec)/2)); 
@@ -43,6 +43,15 @@
             if (chin <= 6 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
             if (chin <= 4 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
             if (chin == null | chin == "") {document.getElementById("ChinUp").innerHTML = "";}
+            
+            //Run time
+            if (min + sec <= 770) {document.getElementById("RunTime").innerHTML = "Excellent";}
+            if ((min+sec) <= 864 & (min+sec) >= 771) {document.getElementById("RunTime").innerHTML = "Good";}
+            if ((min+sec) <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
+            if ((min+sec) <= 993 & (min+sec) >= 927) {document.getElementById("RunTime").innerHTML = "Poor";}
+            if ((min+sec) >= 994) {document.getElementById("RunTime").innerHTML = "Very Poor";}
+            if (min == null | min == "") {document.getElementById("RunTime").innerHTML = "";}
+            if (sec == "") {document.getElementById("RunTime").innerHTML = "";}
             
         });
         
@@ -92,6 +101,7 @@
         >
     <stat id="ChinUp"></stat><br>
     <br>
+    
     <label>Enter your run time:</label>
     <input id="D"
     	type="number" 
@@ -102,7 +112,7 @@
         max="59"
         onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
-        <br>
+    <stat id="RunTime"></stat><br>
     <input id="E" 
     	type="number" 
     	class="form-control formBlock" 
@@ -114,6 +124,7 @@
         >
         <br>
     <br>
+    
     <!-- <label>APAT Score:</label> -->
     <span id="Score"></span>
     <br>
@@ -142,3 +153,4 @@
 </body>
 
 </html>
+
