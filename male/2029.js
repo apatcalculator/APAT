@@ -59,10 +59,10 @@ $(window).load(function(){
 	    var chinpoint = document.getElementById("ChinUp").innerHTML;
 	    var runpoint = document.getElementById("RunTime").innerHTML;
 
-	    const p;
-	    const s;
-	    const c;
-	    const r;
+	    const p = 0
+	    const s = 0 
+	    const c = 0
+	    const r = 0
 	    const add = (+p +s +c +r) || NaN
 	    const final = isNaN(add) ? '' : '';
 
