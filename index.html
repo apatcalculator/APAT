@@ -16,8 +16,6 @@
             var sit = Number($('#B').val()); 
             var chin  = Number($('#C').val());
 
-            //$('#Score').html(((push + sit + chin)/3) + ((min + sec)/2)); 
-            
             //Push Up
             if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
             if (push <= 54 & push >= 50) {document.getElementById("PushUp").innerHTML = "Good";}
@@ -42,15 +40,14 @@
             if (chin <= 4 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
             if (chin == null || chin == "") {document.getElementById("ChinUp").innerHTML = "";}
             
+            //Run Time
             const min = 60 * Number($('#D').val() || NaN);
             const sec = Number($('#E').val() || NaN);
             const total = min + sec;
-            
             const speed = isNaN(total) ? '' : '';
-                        
+
             document.getElementById("RunTime").innerHTML = speed;
             
-            //Run Time
             if (total <= 770) {document.getElementById("RunTime").innerHTML = "Excellent";}
             if (total <= 864 & (min+sec) >= 771) {document.getElementById("RunTime").innerHTML = "Good";}
             if (total <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
@@ -60,7 +57,41 @@
             if (sec === null || sec === "") {document.getElementById("RunTime").innerHTML = "";}
             
             //Total Score
-           	//if (x == 1) {document.getElementById("PushUp").innerHTML = "Score";}
+            var pushpoint = document.getElementById("PushUp").innerHTML;
+            var sitpoint = document.getElementById("SitUp").innerHTML;
+            var chinpoint = document.getElementById("ChinUp").innerHTML;
+            var runpoint = document.getElementById("RunTime").innerHTML;
+            
+            var p = [];
+            var s = [];
+            var c = [];
+            var r = [];
+            
+            if (pushpoint == "Excellent") {p = 4};
+            if (pushpoint == "Good") {p = 3};
+            if (pushpoint == "Fair") {p = 2};
+            if (pushpoint == "Poor") {p = 1};
+            if (pushpoint == "Very Poor") {p = 0};
+            
+            if (sitpoint == "Excellent") {s = 4};
+            if (sitpoint == "Good") {s = 3};
+            if (sitpoint == "Fair") {s = 2};
+            if (sitpoint == "Poor") {s = 1};
+            if (sitpoint == "Very Poor") {s = 0};
+            
+            if (chinpoint == "Excellent") {c = 4};
+            if (chinpoint == "Good") {c = 3};
+            if (chinpoint == "Fair") {c = 2};
+            if (chinpoint == "Poor") {c = 1};
+            if (chinpoint == "Very Poor") {c = 0};
+            
+            if (runpoint == "Excellent") {r = 4};
+            if (runpoint == "Good") {r = 3};
+            if (runpoint == "Fair") {r = 2};
+            if (runpoint == "Poor") {r = 1};
+            if (runpoint == "Very Poor") {r = 0};
+
+			$('#Score').html(p + s + c + r);
             
         });
         
