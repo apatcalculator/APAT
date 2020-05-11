@@ -63,6 +63,7 @@ $(window).load(function(){
 	    var s;
 	    var c;
 	    var r;
+	    var final = +p +s +c +r;
 
 	    if (pushpoint == "Excellent") {p = 4};
 	    if (pushpoint == "Good") {p = 3};
@@ -88,7 +89,7 @@ $(window).load(function(){
 	    if (runpoint == "Poor") {r = 1};
 	    if (runpoint == "Very Poor") {r = 0};
 
-	document.getElementById("Score").innerHTML = p + s + c + r;
+	document.getElementById("Score").innerHTML = final;
 	//$('#Score').html(Number(p + s + c + r));
 		
 	});
