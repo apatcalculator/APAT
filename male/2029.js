@@ -93,6 +93,6 @@ $(window).load(function(){
 
 	//document.getElementById("Score").innerHTML = final;
 	$('#Score').html(Number(p + s + c + r));
-		
+
 	});
 });
