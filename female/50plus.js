@@ -27,7 +27,7 @@ $(window).load(function(){
 	    if (sit <= 19 & sit >= 14) {document.getElementById("SitUp").innerHTML = "Fair";}
 	    if (sit <= 13 & sit >= 10) {document.getElementById("SitUp").innerHTML = "Poor";}
 	    if (sit <= 9) {document.getElementById("SitUp").innerHTML = "Very Poor";}
-	    if (sit === null || sit === "") {document.getElementById("SitUp").innerHTML = "";}
+	    if (sit === null || sit === "") {document.getElementById("SitUp").innerHTML = "No Penalty";}
 
 	    //Chin Up
 	    const chinned = isNaN(chin) ? '' : '';
