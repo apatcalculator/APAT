@@ -59,12 +59,13 @@ $(window).load(function(){
 	    var chinpoint = document.getElementById("ChinUp").innerHTML;
 	    var runpoint = document.getElementById("RunTime").innerHTML;
 
-	    const p = 0
-	    const s = 0 
-	    const c = 0
-	    const r = 0
-	    const add = (+p +s +c +r) || NaN
+	    var p;
+	    var s; 
+	    var c;
+	    var r;
+	    const add = Number((p +s +c +r) || NaN);
 	    const final = isNaN(add) ? '' : '';
+        document.getElementById("Score").innerHTML = final;
 
 	    if (pushpoint == "Excellent") {p = 4};
 	    if (pushpoint == "Good") {p = 3};
@@ -90,8 +91,8 @@ $(window).load(function(){
 	    if (runpoint == "Poor") {r = 1};
 	    if (runpoint == "Very Poor") {r = 0};
 
-	document.getElementById("Score").innerHTML = Number(final);
-	//$('#Score').html(Number(p + s + c + r));
+	//document.getElementById("Score").innerHTML = final;
+	$('#Score').html(Number(p + s + c + r));
 		
 	});
 });
