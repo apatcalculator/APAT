@@ -43,11 +43,11 @@
 
             document.getElementById("RunTime").innerHTML = speed;
             
-            if (total <= 770) {document.getElementById("RunTime").innerHTML = "Excellent";}
-            if (total <= 864 & (min+sec) >= 771) {document.getElementById("RunTime").innerHTML = "Good";}
-            if (total <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
-            if (total <= 993 & (min+sec) >= 927) {document.getElementById("RunTime").innerHTML = "Poor";}
-            if (total >= 994) {document.getElementById("RunTime").innerHTML = "Very Poor";}
+            if (total <= 616) {document.getElementById("RunTime").innerHTML = "Excellent";}
+            if (total <= 701 & total >= 617) {document.getElementById("RunTime").innerHTML = "Good";}
+            if (total <= 771 & total >= 702) {document.getElementById("RunTime").innerHTML = "Fair";}
+            if (total <= 853 & total >= 772) {document.getElementById("RunTime").innerHTML = "Poor";}
+            if (total >= 854) {document.getElementById("RunTime").innerHTML = "Very Poor";}
             if (min === null || min === "") {document.getElementById("RunTime").innerHTML = "";}
             if (sec === null || sec === "") {document.getElementById("RunTime").innerHTML = "";}
             
