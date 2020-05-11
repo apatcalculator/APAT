@@ -28,12 +28,15 @@
             if (sit == null || sit == "") {document.getElementById("SitUp").innerHTML = "";}
        
             //Chin Up
+	    const chinzero = isNaN(chin) ? '' : '';
+	    document.getElementById("ChinUp").innerHTML = speed;
+		
             if (chin >= 8) {document.getElementById("ChinUp").innerHTML = "Excellent";}
             if (chin <= 7 & chin >= 6) {document.getElementById("ChinUp").innerHTML = "Good";}
             if (chin <= 5 & chin >= 4) {document.getElementById("ChinUp").innerHTML = "Fair";}
             if (chin <= 3 & chin >= 2) {document.getElementById("ChinUp").innerHTML = "Poor";}
             if (chin <= 1 & chin >= 0) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
-            if (chin == null || chin == "") {document.getElementById("ChinUp").innerHTML = "";}
+            if (chin == null || chin === "") {document.getElementById("ChinUp").innerHTML = "";}
             
             //Run Time
             const min = 60 * Number($('#D').val() || NaN);
