@@ -12,27 +12,27 @@
             var chin  = Number($('#C').val());
 
             //Push Up
-            if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
-            if (push <= 54 & push >= 50) {document.getElementById("PushUp").innerHTML = "Good";}
-            if (push <= 49 & push >= 46) {document.getElementById("PushUp").innerHTML = "Fair";}
-            if (push <= 45 & push >= 38) {document.getElementById("PushUp").innerHTML = "Poor";}
-            if (push <= 37 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
+            if (push >= 42) {document.getElementById("PushUp").innerHTML = "Excellent";}
+            if (push <= 41 & push >= 35) {document.getElementById("PushUp").innerHTML = "Good";}
+            if (push <= 34 & push >= 28) {document.getElementById("PushUp").innerHTML = "Fair";}
+            if (push <= 27 & push >= 22) {document.getElementById("PushUp").innerHTML = "Poor";}
+            if (push <= 21 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
             if (push == null || push == "") {document.getElementById("PushUp").innerHTML = "";}
             
             //Sit Up
-            if (sit >= 47) {document.getElementById("SitUp").innerHTML = "Excellent";}
-            if (sit <= 46 & sit >= 42) {document.getElementById("SitUp").innerHTML = "Good";}
-            if (sit <= 41 & sit >= 38) {document.getElementById("SitUp").innerHTML = "Fair";}
-            if (sit <= 37 & sit >= 33) {document.getElementById("SitUp").innerHTML = "Poor";}
-            if (sit <= 32 & sit >= 1) {document.getElementById("SitUp").innerHTML = "Very Poor";}
+            if (sit >= 39) {document.getElementById("SitUp").innerHTML = "Excellent";}
+            if (sit <= 38 & sit >= 34) {document.getElementById("SitUp").innerHTML = "Good";}
+            if (sit <= 33 & sit >= 29) {document.getElementById("SitUp").innerHTML = "Fair";}
+            if (sit <= 28 & sit >= 24) {document.getElementById("SitUp").innerHTML = "Poor";}
+            if (sit <= 23 & sit >= 1) {document.getElementById("SitUp").innerHTML = "Very Poor";}
             if (sit == null || sit == "") {document.getElementById("SitUp").innerHTML = "";}
        
             //Chin Up
-            if (chin >= 11) {document.getElementById("ChinUp").innerHTML = "Excellent";}
-            if (chin <= 10 & chin >= 9) {document.getElementById("ChinUp").innerHTML = "Good";}
-            if (chin <= 8 & chin >= 7) {document.getElementById("ChinUp").innerHTML = "Fair";}
-            if (chin <= 6 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
-            if (chin <= 4 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
+            if (chin >= 8) {document.getElementById("ChinUp").innerHTML = "Excellent";}
+            if (chin <= 7 & chin >= 6) {document.getElementById("ChinUp").innerHTML = "Good";}
+            if (chin <= 5 & chin >= 4) {document.getElementById("ChinUp").innerHTML = "Fair";}
+            if (chin <= 3 & chin >= 2) {document.getElementById("ChinUp").innerHTML = "Poor";}
+            if (chin <= 1 & chin >= 0) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
             if (chin == null || chin == "") {document.getElementById("ChinUp").innerHTML = "";}
             
             //Run Time
@@ -43,11 +43,11 @@
 
             document.getElementById("RunTime").innerHTML = speed;
             
-            if (total <= 770) {document.getElementById("RunTime").innerHTML = "Excellent";}
-            if (total <= 864 & (min+sec) >= 771) {document.getElementById("RunTime").innerHTML = "Good";}
-            if (total <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
-            if (total <= 993 & (min+sec) >= 927) {document.getElementById("RunTime").innerHTML = "Poor";}
-            if (total >= 994) {document.getElementById("RunTime").innerHTML = "Very Poor";}
+            if (total <= 704) {document.getElementById("RunTime").innerHTML = "Excellent";}
+            if (total <= 794 & total >= 705) {document.getElementById("RunTime").innerHTML = "Good";}
+            if (total <= 869 & total >= 795) {document.getElementById("RunTime").innerHTML = "Fair";}
+            if (total <= 941 & total >= 870) {document.getElementById("RunTime").innerHTML = "Poor";}
+            if (total >= 942) {document.getElementById("RunTime").innerHTML = "Very Poor";}
             if (min === null || min === "") {document.getElementById("RunTime").innerHTML = "";}
             if (sec === null || sec === "") {document.getElementById("RunTime").innerHTML = "";}
             
