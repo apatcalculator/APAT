@@ -1,6 +1,6 @@
 $(window).load(function(){
 
-	$('#TesterGroup').html("(Female, 50 + )");
+	$('#TesterGroup').html("(Female, 50 +)");
 
 	$('input').keyup(function(){
 
