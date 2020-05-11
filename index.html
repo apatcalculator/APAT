@@ -11,8 +11,15 @@
 	<div style="padding: 0 0 25px 0;">
 	<h1>APAT Calculator <strat id="TesterGroup"></strat></h1>
     </div>
+
+	<label>Step 1: Select Gender and Age</label>
+	<p><a href="http://apatcalculator.com/male/2029.html">Males 20-29</a></p>
+	<p><a href="http://apatcalculator.com/male/3039.html">Males 30-39</a></p>
+	<p><a href="http://apatcalculator.com/male/4049.html">Males 40-49</a></p>
+	<p><a href="http://apatcalculator.com/male/50plus.html">Males 50+</a></p>
+	<br>
     
-    <label>Enter your scores:</label>
+    <label>Step 2: Enter your scores:</label>
     <input id="A" 
     	type="number" 
         class="form-control formBlock" 
@@ -48,7 +55,7 @@
     <br>
     <br>
     
-    <label>Enter your run time:</label>
+    <label>Step 3: Enter your run time:</label>
     <input id="D"
     	type="number" 
         class="form-control formBlock" 
@@ -70,18 +77,11 @@
         max="59"
         onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
-        <br>
+    <br>
     <br>
     
-    <label>APAT Score:</label>
+    <label>Your APAT Score:</label>
     <span id="Score" style="text-align: center; font-size: 72px"></span>
-    <br>
-	
-	<p><a href="http://apatcalculator.com/male/2029.html">Males 20-29</a></p>
-	<p><a href="http://apatcalculator.com/male/3039.html">Males 30-39</a></p>
-	<p><a href="http://apatcalculator.com/male/4049.html">Males 40-49</a></p>
-	<p><a href="http://apatcalculator.com/male/50plus.html">Males 50+</a></p>
-	<br>
 
   <script>
     // results
