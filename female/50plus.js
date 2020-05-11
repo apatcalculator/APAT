@@ -83,7 +83,7 @@ $(window).load(function(){
 	    if (chinpoint == "Good") {c = 3};
 	    if (chinpoint == "Fair") {c = 2};
 	    if (chinpoint == "Poor") {c = 1};
-	    if (chinpoint == "Very Poor") {c = 0};
+	    if (chinpoint == "No Penalty") {c = 0};
 
 	    if (runpoint == "Excellent") {r = 4};
 	    if (runpoint == "Good") {r = 3};
