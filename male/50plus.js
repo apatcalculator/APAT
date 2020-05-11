@@ -1,6 +1,6 @@
 $(window).load(function(){
 
-	$('#TesterGroup').html("(Males 20-29)");
+	$('#TesterGroup').html("(Males 50 or older)");
 
 	$('input').keyup(function(){
 
