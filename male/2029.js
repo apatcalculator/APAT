@@ -88,7 +88,7 @@ $(window).load(function(){
 	    if (runpoint == "Poor") {r = 1};
 	    if (runpoint == "Very Poor") {r = 0};
 
-	$('#Score').html(p + s + c + r);
+	$('#Score').html(Number(p + s + c + r));
 		
 	});
 });
