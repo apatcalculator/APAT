@@ -4,8 +4,6 @@ $(window).load(function(){
 
 	$('input').keyup(function(){
 
-	    //Tester Group
-
 	    //Scores
 	    const push  = Number($('#A').val() || NaN); 
 	    const sit = Number($('#B').val() || NaN); 
