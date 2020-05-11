@@ -27,7 +27,7 @@ $(window).load(function(){
 	    if (sit <= 19 & sit >= 14) {document.getElementById("SitUp").innerHTML = "Fair";}
 	    if (sit <= 13 & sit >= 10) {document.getElementById("SitUp").innerHTML = "Poor";}
 	    if (sit <= 9) {document.getElementById("SitUp").innerHTML = "Very Poor";}
-	    if (sit === null || sit === "") {document.getElementById("SitUp").innerHTML = "No Penalty";}
+	    if (sit === null || sit === "") {document.getElementById("SitUp").innerHTML = "";}
 
 	    //Chin Up
 	    const chinned = isNaN(chin) ? '' : '';
@@ -36,7 +36,7 @@ $(window).load(function(){
 	    if (chin === 3) {document.getElementById("ChinUp").innerHTML = "Good";}
 	    if (chin === 2) {document.getElementById("ChinUp").innerHTML = "Fair";}
 	    if (chin === 1 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
-	    if (chin === 0) {document.getElementById("ChinUp").innerHTML = "";}
+	    if (chin === 0) {document.getElementById("ChinUp").innerHTML = "No Penalty";}
 	    if (chin === null || chin === "") {document.getElementById("ChinUp").innerHTML = "";}
 
 	    //Run Time
