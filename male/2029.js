@@ -90,7 +90,7 @@ $(window).load(function(){
 	    if (runpoint == "Poor") {r = 1};
 	    if (runpoint == "Very Poor") {r = 0};
 
-	document.getElementById("Score").innerHTML = final;
+	document.getElementById("Score").innerHTML = Number(final);
 	//$('#Score').html(Number(p + s + c + r));
 		
 	});
