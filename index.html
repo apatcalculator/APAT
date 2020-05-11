@@ -5,13 +5,18 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
 
-  <!-- TODO: Missing CoffeeScript 2 -->
-
   <script type="text/javascript">//<![CDATA[
+	
 
     $(window).load(function(){
       
+      	$('#TesterGroup').html("(Males 20-29)");
+      
         $('input').keyup(function(){
+        
+        	//Tester Group
+            
+        	//Scores
             var push  = Number($('#A').val()); 
             var sit = Number($('#B').val()); 
             var chin  = Number($('#C').val());
@@ -109,7 +114,7 @@
 </head>
 <body>
 
-	<h1>APF Calculator (Males 20-29)</h1>
+	<h1>APFT Calculator <strat id="TesterGroup"></strat></h1>
     
     <label>Enter your scores:</label>
     <input id="A" 
@@ -172,7 +177,7 @@
         <br>
     <br>
     
-    <!-- <label>APAT Score:</label> -->
+    <label>APAT Score:</label>
     <span id="Score"></span>
     <br>
 	
@@ -180,8 +185,7 @@
 	<p><a href="http://apatcalculator.com/male/3039.html">Males 30-39</a></p>
 	<p><a href="http://apatcalculator.com/male/4049.html">Males 40-49</a></p>
 	<p><a href="http://apatcalculator.com/male/50plus.html">Males 50+</a></p>
-
-<br>
+	<br>
 
   <script>
     // results
