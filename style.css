@@ -1,15 +1,44 @@
-  html {
-    display: table;
-    margin: 0 auto;
-  }
-  body {
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    margin:0 auto;
-  }
-  h1 { margin: 0 10px 0px 5px; padding: 0px; font-size: 42px; font-family: Arial }
-  input { margin: 0 10px 10px 10px; padding: 5px; font-size: 36px; width: 250px }
-  label { margin: 0 10px 10px 10px; font-size: 24px; display: block; font-family: Arial }
-  span { margin: 0 0px 0px 10px; font-size: 42px; font-family: Arial }
-  stat { margin: 0 0px 0px 10px; font-size: 36px; font-family: Arial }
+html {
+  display: table;
+  margin: 0 auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  margin:0 auto;
+}
+
+h1 { 
+  margin: 0 10px 0px 5px; 
+  padding: 0px; 
+  font-size: 42px; 
+  font-family: Arial 
+}
+
+input { 
+  margin: 0 10px 10px 10px; 
+  padding: 5px; 
+  font-size: 36px; 
+  width: 250px 
+}
+
+label { 
+  margin: 0 10px 10px 10px; 
+  font-size: 24px; 
+  display: block; 
+  font-family: Arial 
+}
+
+span { 
+  margin: 0 0px 0px 10px; 
+  font-size: 42px; 
+  font-family: Arial 
+}
+
+stat { 
+  margin: 0 0px 0px 10px; 
+  font-size: 36px; 
+  font-family: Arial 
+}
