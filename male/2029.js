@@ -59,10 +59,10 @@ $(window).load(function(){
 	    var chinpoint = document.getElementById("ChinUp").innerHTML;
 	    var runpoint = document.getElementById("RunTime").innerHTML;
 
-	    var p = [];
-	    var s = [];
-	    var c = [];
-	    var r = [];
+	    var p;
+	    var s;
+	    var c;
+	    var r;
 
 	    if (pushpoint == "Excellent") {p = 4};
 	    if (pushpoint == "Good") {p = 3};
