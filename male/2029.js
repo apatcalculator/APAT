@@ -59,11 +59,12 @@ $(window).load(function(){
 	    var chinpoint = document.getElementById("ChinUp").innerHTML;
 	    var runpoint = document.getElementById("RunTime").innerHTML;
 
-	    var p;
-	    var s;
-	    var c;
-	    var r;
-	    var final = +p +s +c +r;
+	    const p;
+	    const s;
+	    const c;
+	    const r;
+	    const add = (+p +s +c +r) || NaN
+	    const final = isNaN(add) ? '' : '';
 
 	    if (pushpoint == "Excellent") {p = 4};
 	    if (pushpoint == "Good") {p = 3};
