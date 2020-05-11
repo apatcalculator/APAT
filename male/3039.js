@@ -44,9 +44,9 @@
             document.getElementById("RunTime").innerHTML = speed;
             
             if (total <= 647) {document.getElementById("RunTime").innerHTML = "Excellent";}
-            if (total <= 740 & (min+sec) >= 648) {document.getElementById("RunTime").innerHTML = "Good";}
-            if (total <= 816 & (min+sec) >= 741) {document.getElementById("RunTime").innerHTML = "Fair";}
-            if (total <= 892 & (min+sec) >= 817) {document.getElementById("RunTime").innerHTML = "Poor";}
+            if (total <= 740 & total >= 648) {document.getElementById("RunTime").innerHTML = "Good";}
+            if (total <= 816 & total >= 741) {document.getElementById("RunTime").innerHTML = "Fair";}
+            if (total <= 892 & total >= 817) {document.getElementById("RunTime").innerHTML = "Poor";}
             if (total >= 893) {document.getElementById("RunTime").innerHTML = "Very Poor";}
             if (min === null || min === "") {document.getElementById("RunTime").innerHTML = "";}
             if (sec === null || sec === "") {document.getElementById("RunTime").innerHTML = "";}
