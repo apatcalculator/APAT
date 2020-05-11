@@ -12,31 +12,28 @@
             var chin  = Number($('#C').val());
 
             //Push Up
-            if (push >= 70) {document.getElementById("PushUp").innerHTML = "Machine";}
-            if (push <= 69 & push >= 50) {document.getElementById("PushUp").innerHTML = "Excellent";}
+            if (push >= 50) {document.getElementById("PushUp").innerHTML = "Excellent";}
             if (push <= 49 & push >= 41) {document.getElementById("PushUp").innerHTML = "Good";}
             if (push <= 40 & push >= 36) {document.getElementById("PushUp").innerHTML = "Fair";}
             if (push <= 35 & push >= 30) {document.getElementById("PushUp").innerHTML = "Poor";}
             if (push <= 29 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
-            if (push == null | push == "") {document.getElementById("PushUp").innerHTML = "";}
-
+            if (push == null || push == "") {document.getElementById("PushUp").innerHTML = "";}
+            
             //Sit Up
-            if (sit >= 70) {document.getElementById("SitUp").innerHTML = "Machine";}
-            if (sit <= 69 & sit >= 43) {document.getElementById("SitUp").innerHTML = "Excellent";}
+            if (sit >= 43) {document.getElementById("SitUp").innerHTML = "Excellent";}
             if (sit <= 42 & sit >= 39) {document.getElementById("SitUp").innerHTML = "Good";}
             if (sit <= 38 & sit >= 35) {document.getElementById("SitUp").innerHTML = "Fair";}
             if (sit <= 34 & sit >= 30) {document.getElementById("SitUp").innerHTML = "Poor";}
             if (sit <= 29 & sit >= 1) {document.getElementById("SitUp").innerHTML = "Very Poor";}
-            if (sit == null | sit == "") {document.getElementById("SitUp").innerHTML = "";}
-
+            if (sit == null || sit == "") {document.getElementById("SitUp").innerHTML = "";}
+       
             //Chin Up
-            if (chin >= 70) {document.getElementById("ChinUp").innerHTML = "Machine";}
-            if (chin <= 69 & chin >= 10) {document.getElementById("ChinUp").innerHTML = "Excellent";}
+            if (chin >= 10) {document.getElementById("ChinUp").innerHTML = "Excellent";}
             if (chin <= 9 & chin >= 8) {document.getElementById("ChinUp").innerHTML = "Good";}
             if (chin <= 7 & chin >= 6) {document.getElementById("ChinUp").innerHTML = "Fair";}
             if (chin <= 5 & chin >= 3) {document.getElementById("ChinUp").innerHTML = "Poor";}
             if (chin <= 2 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
-            if (chin == null | chin == "") {document.getElementById("ChinUp").innerHTML = "";}
+            if (chin == null || chin == "") {document.getElementById("ChinUp").innerHTML = "";}
             
             //Run Time
             const min = 60 * Number($('#D').val() || NaN);
@@ -46,11 +43,11 @@
 
             document.getElementById("RunTime").innerHTML = speed;
             
-            if (total <= 770) {document.getElementById("RunTime").innerHTML = "Excellent";}
-            if (total <= 864 & (min+sec) >= 771) {document.getElementById("RunTime").innerHTML = "Good";}
-            if (total <= 926 & (min+sec) >= 865) {document.getElementById("RunTime").innerHTML = "Fair";}
-            if (total <= 993 & (min+sec) >= 927) {document.getElementById("RunTime").innerHTML = "Poor";}
-            if (total >= 994) {document.getElementById("RunTime").innerHTML = "Very Poor";}
+            if (total <= 647) {document.getElementById("RunTime").innerHTML = "Excellent";}
+            if (total <= 740 & (min+sec) >= 648) {document.getElementById("RunTime").innerHTML = "Good";}
+            if (total <= 816 & (min+sec) >= 741) {document.getElementById("RunTime").innerHTML = "Fair";}
+            if (total <= 892 & (min+sec) >= 817) {document.getElementById("RunTime").innerHTML = "Poor";}
+            if (total >= 893) {document.getElementById("RunTime").innerHTML = "Very Poor";}
             if (min === null || min === "") {document.getElementById("RunTime").innerHTML = "";}
             if (sec === null || sec === "") {document.getElementById("RunTime").innerHTML = "";}
             
