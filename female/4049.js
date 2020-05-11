@@ -35,7 +35,7 @@ $(window).load(function(){
 	    if (chin >= 4) {document.getElementById("ChinUp").innerHTML = "Excellent";}
 	    if (chin === 3) {document.getElementById("ChinUp").innerHTML = "Good";}
 	    if (chin === 2) {document.getElementById("ChinUp").innerHTML = "Fair";}
-	    if (chin === 1 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
+	    if (chin === 1) {document.getElementById("ChinUp").innerHTML = "Poor";}
 	    if (chin === 0) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
 	    if (chin === null || chin === "") {document.getElementById("ChinUp").innerHTML = "";}
 
