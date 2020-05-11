@@ -1,68 +1,33 @@
 <html>
 <head>
-
-  <title>APAT Calculator</title>
-
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
-
-  <!-- TODO: Missing CoffeeScript 2 -->
-
-  <script type="text/javascript">//<![CDATA[
-
-    $(window).load(function(){
-      
-        $('input').keyup(function(){
-            var push  = Number($('#A').val()); 
-            var sit = Number($('#B').val()); 
-            var chin  = Number($('#C').val());
-            var min = Number($('#D').val());
-            var sec = Number($('#E').val());
-
-            //$('#Score').html(((push + sit + chin)/3) + ((min + sec)/2)); 
-            
-            //Push Up
-            if (push >= 55) {document.getElementById("PushUp").innerHTML = "Excellent";}
-            if (push <= 54 & push >= 50) {document.getElementById("PushUp").innerHTML = "Good";}
-            if (push <= 49 & push >= 46) {document.getElementById("PushUp").innerHTML = "Fair";}
-            if (push <= 45 & push >= 38) {document.getElementById("PushUp").innerHTML = "Poor";}
-            if (push <= 37 & push >= 1) {document.getElementById("PushUp").innerHTML = "Very Poor";}
-            if (push == null | push == "") {document.getElementById("PushUp").innerHTML = "";}
-            
-            //Sit Up
-            if (sit >= 47) {document.getElementById("SitUp").innerHTML = "Excellent";}
-            if (sit <= 46 & sit >= 42) {document.getElementById("SitUp").innerHTML = "Good";}
-            if (sit <= 41 & sit >= 38) {document.getElementById("SitUp").innerHTML = "Fair";}
-            if (sit <= 37 & sit >= 33) {document.getElementById("SitUp").innerHTML = "Poor";}
-            if (sit <= 32 & sit >= 1) {document.getElementById("SitUp").innerHTML = "Very Poor";}
-            if (sit == null | sit == "") {document.getElementById("SitUp").innerHTML = "";}
-       
-            //Chin Up
-            if (chin >= 11) {document.getElementById("ChinUp").innerHTML = "Excellent";}
-            if (chin <= 10 & chin >= 9) {document.getElementById("ChinUp").innerHTML = "Good";}
-            if (chin <= 8 & chin >= 7) {document.getElementById("ChinUp").innerHTML = "Fair";}
-            if (chin <= 6 & chin >= 5) {document.getElementById("ChinUp").innerHTML = "Poor";}
-            if (chin <= 4 & chin >= 1) {document.getElementById("ChinUp").innerHTML = "Very Poor";}
-            if (chin == null | chin == "") {document.getElementById("ChinUp").innerHTML = "";}
-            
-        });
-        
-	});
-</script>
-
-<style>
-	h1 { margin: 0 10px 25px 5px; padding: 5px; font-size: 32px; font-family: Arial }
-	input { margin: 0 10px 10px 10px; padding: 5px; font-size: 24px; width: 200px }
-    label { margin: 0 10px 10px 10px; font-size: 20px; display: block; font-family: Arial }
-	span { margin: 0 0px 0px 10px; font-size: 44px; font-family: Arial }
-	stat { margin: 0 0px 0px 10px; font-size: 24px; font-family: Arial }
-</style>
-
+<title>APAT Calculator</title>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/male/2029.js"></script>
+<link rel="stylesheet" type="text/css" href="/style.css">
 </head>
+
 <body>
 
-	<h1>APF Calculator (Males 20-29)</h1>
+	<div style="padding: 0 0 25px 0;">
+	<h1>APAT Calculator <strat id="TesterGroup"></strat></h1>
+    </div>
+
+	<div style="padding: 0 0 25px 0;">
+    <label>Step 1: Select gender and age</label>
+    <select onChange="window.location.href=this.value">
+      	<option value="female/2029.html">Female (20-29)</option>
+      	<option value="female/3039.html">Female (30-39)</option>
+      	<option value="female/4049.html">Female (40-49)</option>
+     	<option value="female/50plus.html">Female (50+)</option>
+      	<option value="male/2029.html">Male (20-29)</option>
+      	<option value="male/3039.html">Male (30-39)</option>
+      	<option value="male/4049.html">Male (40-49)</option>
+     	<option value="male/50plus.html">Male (50+)</option>
+    </select>
+    </div>
     
-    <label>Enter your endurance scores:</label>
+    <div style="padding: 0 0 25px 0;">
+    <label>Step 2: Enter your scores:</label>
     <input id="A" 
     	type="number" 
         class="form-control formBlock" 
@@ -71,7 +36,9 @@
         min="1" 
         max="300"
         onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }">
-    <stat id="PushUp"></stat><br>
+    <stat id="PushUp"></stat>
+    <br>
+    
     <input id="B" 
     	type="number" 
         class="form-control formBlock" 
@@ -80,7 +47,9 @@
         min="1" 
         max="300"
         onkeyup="if(parseInt(this.value) > 300){ this.value = 300; return false; }">
-    <stat id="SitUp"></stat><br>
+    <stat id="SitUp"></stat>
+    <br>
+    
     <input id="C" 
     	type="number" 
         class="form-control formBlock" 
@@ -90,9 +59,11 @@
         max="100"
         onkeyup="if(parseInt(this.value) > 100){ this.value = 100; return false; }"
         >
-    <stat id="ChinUp"></stat><br>
-    <br>
-    <label>Enter your run time:</label>
+    <stat id="ChinUp"></stat>
+    </div>
+    
+    <div style="padding: 0 0 25px 0;">
+    <label>Step 3: Enter your run time:</label>
     <input id="D"
     	type="number" 
         class="form-control formBlock" 
@@ -102,7 +73,9 @@
         max="59"
         onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
-        <br>
+    <stat id="RunTime"></stat>
+    <br>
+    
     <input id="E" 
     	type="number" 
     	class="form-control formBlock" 
@@ -112,13 +85,10 @@
         max="59"
         onkeyup="if(parseInt(this.value) > 59){ this.value = 59; return false; }"
         >
-        <br>
-    <br>
-    <!-- <label>APAT Score:</label> -->
-    <span id="Score"></span>
-    <br>
-
-<br>
+    </div>
+    
+    <label>Your APAT Score:</label>
+    <span id="Score" style="text-align: center; font-size: 72px"></span>
 
   <script>
     // results
