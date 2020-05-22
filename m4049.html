@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>APAT Calculator</title>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="/male/4049.js"></script>
 <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
@@ -15,14 +15,13 @@
 	<div style="padding: 0 0 25px 0;">
     <label>Step 1: Select gender and age</label>
     <select onChange="window.location.href=this.value">
-	<option value="none" selected disabled hidden></option> 
       	<option value="f2029.html">Female (20-29)</option>
       	<option value="f3039.html">Female (30-39)</option>
       	<option value="f4049.html">Female (40-49)</option>
      	<option value="f50plus.html">Female (50+)</option>
       	<option value="m2029.html">Male (20-29)</option>
       	<option value="m3039.html">Male (30-39)</option>
-      	<option value="m4049.html">Male (40-49)</option>
+      	<option value="m4049.html" selected>Male (40-49)</option>
      	<option value="m50plus.html">Male (50+)</option>
     </select>
     </div>
