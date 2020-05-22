@@ -14,7 +14,7 @@
 
 	<div style="padding: 0 0 25px 0;">
     <label>Step 1: Select gender and age</label>
-    <select onChange="window.location.href=this.value" id="options">
+    <select onChange="window.location.href=this.value">
 	<option value="none" selected disabled hidden></option> 
       	<option value="f2029.html">Female (20-29)</option>
       	<option value="f3039.html">Female (30-39)</option>
@@ -108,14 +108,7 @@
     }
     window.name = "result"
 </script>
-<script type="text/javascript">
-var value = '0';
 
-document.getElementById('options').onchange = function() {
-    value = parseInt(value) + parseInt(this.value);
-    alert(value);
-}
-</script>
 </body>
 
 </html>
